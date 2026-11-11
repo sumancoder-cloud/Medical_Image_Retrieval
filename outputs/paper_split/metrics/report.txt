@@ -1,0 +1,39 @@
+MEDICAL IMAGE RETRIEVAL REPORT
+================================
+Queries: 1600
+Database images: 6400
+Model: vgg16_imagenet1k_v1_classifier_fc1
+Embedding dimension: 4096
+Similarity: cosine
+
+OVERALL METRICS
+----------------
+Precision@10: 0.650375
+Precision@20: 0.632750
+Precision@30: 0.618438
+Recall@30:    0.023191
+
+PER-CLASS METRICS
+------------------
+class  queries  P@10      P@20      P@30      R@30
+DLP    200      0.408500  0.397000  0.375000  0.014063
+DRM    200      0.515000  0.491500  0.482000  0.018075
+ESO    200      0.572000  0.573250  0.562833  0.021106
+NC     200      0.913500  0.908750  0.905667  0.033962
+NP     200      0.894000  0.861250  0.840833  0.031531
+NZL    200      0.686500  0.677000  0.671500  0.025181
+POLY   200      0.522000  0.490000  0.478167  0.017931
+ULCO   200      0.691500  0.663250  0.631500  0.023681
+
+LOWEST P@10 QUERIES (first 10)
+------------------------------
+P@10=0.00 P@20=0.00 P@30=0.03 class_id=0 path=C:\Users\user\OneDrive\ドキュメント\Desktop\UROP\data\kvasir-dataset-v2\dyed-lifted-polyps\88ad57db-8a10-4b77-bf1d-d5fa078fa8e4.jpg
+P@10=0.00 P@20=0.05 P@30=0.07 class_id=0 path=C:\Users\user\OneDrive\ドキュメント\Desktop\UROP\data\kvasir-dataset-v2\dyed-lifted-polyps\14310aa3-c455-4fb5-b498-809c675fec8f.jpg
+P@10=0.00 P@20=0.10 P@30=0.13 class_id=0 path=C:\Users\user\OneDrive\ドキュメント\Desktop\UROP\data\kvasir-dataset-v2\dyed-lifted-polyps\a6ec9dbf-4e31-4535-b625-f96df8db6125.jpg
+P@10=0.00 P@20=0.05 P@30=0.03 class_id=0 path=C:\Users\user\OneDrive\ドキュメント\Desktop\UROP\data\kvasir-dataset-v2\dyed-lifted-polyps\28b91fe1-d987-45cf-8204-6b1ddf8a56f7.jpg
+P@10=0.00 P@20=0.00 P@30=0.00 class_id=0 path=C:\Users\user\OneDrive\ドキュメント\Desktop\UROP\data\kvasir-dataset-v2\dyed-lifted-polyps\ca921eae-72aa-4206-8227-ceea607ebd38.jpg
+P@10=0.00 P@20=0.05 P@30=0.07 class_id=0 path=C:\Users\user\OneDrive\ドキュメント\Desktop\UROP\data\kvasir-dataset-v2\dyed-lifted-polyps\3564be22-d58c-4194-8a31-647894585f55.jpg
+P@10=0.00 P@20=0.15 P@30=0.17 class_id=0 path=C:\Users\user\OneDrive\ドキュメント\Desktop\UROP\data\kvasir-dataset-v2\dyed-lifted-polyps\0ecfc13c-9213-4738-9365-ca94a5dd3eed.jpg
+P@10=0.00 P@20=0.00 P@30=0.00 class_id=0 path=C:\Users\user\OneDrive\ドキュメント\Desktop\UROP\data\kvasir-dataset-v2\dyed-lifted-polyps\3d6522a9-2ad7-41cb-91e6-cc4fe56189f5.jpg
+P@10=0.00 P@20=0.05 P@30=0.07 class_id=0 path=C:\Users\user\OneDrive\ドキュメント\Desktop\UROP\data\kvasir-dataset-v2\dyed-lifted-polyps\02ddd3d4-a265-454b-a778-e0be71bee79b.jpg
+P@10=0.00 P@20=0.25 P@30=0.17 class_id=0 path=C:\Users\user\OneDrive\ドキュメント\Desktop\UROP\data\kvasir-dataset-v2\dyed-lifted-polyps\2cf6ee7b-3d8c-4cd2-bd0e-6b1dd0abe63d.jpg
