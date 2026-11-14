@@ -9,12 +9,14 @@ data/
 *.zip
 *.zip.part*
 .cache/
+*.pt
 
 # Generated feature arrays and large retrieval exports
 outputs/paper_split/manifest.csv
 outputs/paper_split/features.npz
 outputs/paper_split/metrics/query_results.csv
 outputs/paper_split/metrics/top_retrievals.csv
+outputs/paper_split/resnet18_features.npz
 
 # Local supplied paper copy; obtain it from the original source
 Medical_Image_Retrieval_System_for_Endoscopy_Images_Using_CNN-final (1).pdf

@@ -1,0 +1,39 @@
+MEDICAL IMAGE RETRIEVAL REPORT
+================================
+Queries: 1600
+Database images: 6400
+Model: resnet18_finetuned_layer4_avgpool
+Embedding dimension: 512
+Similarity: cosine
+
+OVERALL METRICS
+----------------
+Precision@10: 0.864438
+Precision@20: 0.858781
+Precision@30: 0.855646
+Recall@30:    0.032087
+
+PER-CLASS METRICS
+------------------
+class  queries  P@10      P@20      P@30      R@30
+DLP    200      0.849000  0.845500  0.843000  0.031613
+DRM    200      0.856000  0.857000  0.855500  0.032081
+ESO    200      0.704000  0.699250  0.695333  0.026075
+NC     200      0.962000  0.959000  0.957333  0.035900
+NP     200      0.976000  0.973750  0.974333  0.036537
+NZL    200      0.772500  0.764500  0.759667  0.028488
+POLY   200      0.866500  0.856000  0.851500  0.031931
+ULCO   200      0.929500  0.915250  0.908500  0.034069
+
+LOWEST P@10 QUERIES (first 10)
+------------------------------
+P@10=0.00 P@20=0.20 P@30=0.13 class_id=0 path=C:\Users\user\OneDrive\ドキュメント\Desktop\UROP\data\kvasir-dataset-v2\dyed-lifted-polyps\9d1ee8df-ec23-4d62-8fca-134cdf63c7c5.jpg
+P@10=0.00 P@20=0.00 P@30=0.03 class_id=0 path=C:\Users\user\OneDrive\ドキュメント\Desktop\UROP\data\kvasir-dataset-v2\dyed-lifted-polyps\0ecfc13c-9213-4738-9365-ca94a5dd3eed.jpg
+P@10=0.00 P@20=0.00 P@30=0.03 class_id=0 path=C:\Users\user\OneDrive\ドキュメント\Desktop\UROP\data\kvasir-dataset-v2\dyed-lifted-polyps\a1fa10cb-5c2b-450b-a3b4-fd9494b5b7eb.jpg
+P@10=0.00 P@20=0.00 P@30=0.00 class_id=0 path=C:\Users\user\OneDrive\ドキュメント\Desktop\UROP\data\kvasir-dataset-v2\dyed-lifted-polyps\5f3d6ed3-dca1-4fb0-a0e3-fd53fffa4cff.jpg
+P@10=0.00 P@20=0.15 P@30=0.17 class_id=1 path=C:\Users\user\OneDrive\ドキュメント\Desktop\UROP\data\kvasir-dataset-v2\dyed-resection-margins\0e4dde38-ba8a-4526-99f5-a23912dd2ac7.jpg
+P@10=0.00 P@20=0.05 P@30=0.07 class_id=1 path=C:\Users\user\OneDrive\ドキュメント\Desktop\UROP\data\kvasir-dataset-v2\dyed-resection-margins\8a32fa44-6ed6-476c-b9e8-9ef2c3dbdd0d.jpg
+P@10=0.00 P@20=0.15 P@30=0.13 class_id=2 path=C:\Users\user\OneDrive\ドキュメント\Desktop\UROP\data\kvasir-dataset-v2\esophagitis\7d72b867-6504-4fa8-bf51-f204aed9456e.jpg
+P@10=0.00 P@20=0.10 P@30=0.10 class_id=2 path=C:\Users\user\OneDrive\ドキュメント\Desktop\UROP\data\kvasir-dataset-v2\esophagitis\22bc4364-c715-4eb6-a711-278b8ed2c6f1.jpg
+P@10=0.00 P@20=0.00 P@30=0.00 class_id=2 path=C:\Users\user\OneDrive\ドキュメント\Desktop\UROP\data\kvasir-dataset-v2\esophagitis\655ec3cd-0c65-4fcd-a89e-8ac5746ec439.jpg
+P@10=0.00 P@20=0.00 P@30=0.00 class_id=3 path=C:\Users\user\OneDrive\ドキュメント\Desktop\UROP\data\kvasir-dataset-v2\normal-cecum\5cb6d900-c930-4094-91ca-ccff14a2e176.jpg

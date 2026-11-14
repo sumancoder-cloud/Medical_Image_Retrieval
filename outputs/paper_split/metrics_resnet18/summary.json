@@ -1,0 +1,12 @@
+{
+  "queries": 1600,
+  "database_images": 6400,
+  "precision_at_10_macro_queries": 0.8644375000000001,
+  "precision_at_20_macro_queries": 0.8587812499999999,
+  "precision_at_30_macro_queries": 0.8556458333333333,
+  "recall_at_30_macro_queries": 0.03208671875,
+  "model": "resnet18_finetuned_layer4_avgpool",
+  "embedding_dimension": 512,
+  "similarity": "cosine",
+  "relevance": "same normalized class"
+}

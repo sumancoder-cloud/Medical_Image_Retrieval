@@ -89,7 +89,34 @@ The command above uses all 800 non-test images per class. Do not pass
 `--train-per-class 872` for Kvasir-V2; that would require 1,072 images per
 class.
 
-## 4. Output files
+## 4. Fine-tuned retrieval model
+
+The baseline uses frozen VGG-16 ImageNet features. To train a stronger
+embedding without touching the test queries, fine-tune ResNet-18 on the
+`database` rows and export its penultimate-layer features:
+
+```powershell
+$py = ".\.venv\Scripts\python.exe"
+& $py fine_tune_retrieval.py `
+  --manifest "outputs\paper_split\manifest.csv" `
+  --checkpoint "outputs\paper_split\resnet18_finetuned.pt" `
+  --output-features "outputs\paper_split\resnet18_features.npz" `
+  --epochs 12 `
+  --batch-size 32 `
+  --export-batch-size 128
+
+& $py evaluate_retrieval.py `
+  --features "outputs\paper_split\resnet18_features.npz" `
+  --output-dir "outputs\paper_split\metrics_resnet18"
+```
+
+The script uses a stratified validation subset of database images, freezes the
+early backbone, fine-tunes ResNet-18's final block and classifier, selects the
+best validation checkpoint, and evaluates the untouched test split.
+If training already produced the checkpoint, add `--resume` to skip training
+and only export embeddings.
+
+## 5. Output files
 
 | File | Meaning |
 |---|---|
@@ -106,7 +133,7 @@ settings needed to audit a run. Results should not be claimed to match the
 paper unless the dataset version, split, preprocessing, and model weights are
 the same.
 
-## 5. Reproducibility notes
+## 6. Reproducibility notes
 
 - The split is deterministic and uses a stable hash-based ordering of paths.
 - Feature extraction uses `torch.inference_mode()` and a fixed seed.
