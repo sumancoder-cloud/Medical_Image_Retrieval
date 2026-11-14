@@ -116,7 +116,20 @@ best validation checkpoint, and evaluates the untouched test split.
 If training already produced the checkpoint, add `--resume` to skip training
 and only export embeddings.
 
-## 5. Output files
+## 5. Web interface
+
+Install the additional interface dependency and start the local app:
+
+```powershell
+& $py -m pip install -r requirements.txt
+& $py -m streamlit run app.py
+```
+
+Open the displayed local URL, upload a JPG/PNG image, and choose any result
+count from 10 through 30. The app uses the fine-tuned checkpoint and displays
+the retrieved database images with their predicted class and cosine similarity.
+
+## 6. Output files
 
 | File | Meaning |
 |---|---|
@@ -133,7 +146,7 @@ settings needed to audit a run. Results should not be claimed to match the
 paper unless the dataset version, split, preprocessing, and model weights are
 the same.
 
-## 6. Reproducibility notes
+## 7. Reproducibility notes
 
 - The split is deterministic and uses a stable hash-based ordering of paths.
 - Feature extraction uses `torch.inference_mode()` and a fixed seed.
